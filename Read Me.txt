@@ -1,0 +1,4 @@
+commads to run backend:
+npm run server
+command to run frontend:
+npm run dev
