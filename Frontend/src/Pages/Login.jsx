@@ -31,7 +31,7 @@ const Login = () => {
         localStorage.setItem("userId", data?.user._id);
         dispatch(authActions.login());
         alert("login successfull");
-        navigate("/");
+        navigate("/blogs");
       }
     } catch (error) {
       console.log(error);

@@ -12,7 +12,7 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<Blogs />} />
+        <Route path="/" element={<Login />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/myblogs" element={<UserBlog />} />
         <Route path="/createBlog" element={<CreateBlog />} />
