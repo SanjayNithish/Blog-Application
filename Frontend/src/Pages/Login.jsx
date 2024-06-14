@@ -28,6 +28,7 @@ const Login = () => {
         password: input.password,
       });
       if (data.success) {
+        localStorage.setItem("userId", data?.user._id);
         dispatch(authActions.login());
         alert("login successfull");
         navigate("/");

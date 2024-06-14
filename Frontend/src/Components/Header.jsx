@@ -7,13 +7,15 @@ import { authActions } from "../Redux/Store";
 const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const isLogin = useSelector((state) => state.isLogin);
+  let isLogin = useSelector((state) => state.isLogin);
+  isLogin = isLogin || localStorage.getItem("userID");
   console.log(isLogin);
 
   const handleLogout = () => {
     try {
       dispatch(authActions.logout());
       alert("Logout successful");
+      localStorage.clear();
       navigate("/login");
     } catch (error) {
       console.log(error);
@@ -31,6 +33,9 @@ const Header = () => {
             </Link>
             <Link to="/myblogs" className="navbar-button">
               My Blogs
+            </Link>
+            <Link to="/createBlog" className="navbar-button">
+              Create Blog
             </Link>
           </div>
         )}

@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
-import "../App.css";
-import axios from "axios";
 import BlogCard from "../Components/BlogCard";
+import axios from "axios";
 
-const Blogs = () => {
+const userBlog = () => {
   const [blogs, setBlogs] = useState([]);
-
-  const getAllBlogs = async () => {
+  const getUserBlogs = async () => {
     try {
-      const { data } = await axios.get("/blog/allBlogs");
+      const id = localStorage.getItem("userId");
+      const { data } = await axios.get(`/blog/userBlog/${id}`);
       if (data?.success) {
-        setBlogs(data?.blogs);
+        setBlogs(data?.userBlog.blogs);
+        console.log(blog);
       }
     } catch (error) {
       console.log(error);
@@ -18,28 +18,28 @@ const Blogs = () => {
   };
 
   useEffect(() => {
-    getAllBlogs();
+    getUserBlogs();
   }, []);
-
+  console.log(blogs);
   return (
     <div>
-      {blogs &&
+      {blogs && blogs.length > 0 ? (
         blogs.map((blog) => (
           <BlogCard
-            key={blog._id}
             id={blog._id}
-            isUser={
-              localStorage.getItem("userId") === (blog.user && blog.user._id)
-            }
+            isUser={true}
             title={blog.title}
             description={blog.description}
             image={blog.image}
             username={blog.user ? blog.user.username : "No User"}
             time={blog.createdAt}
           />
-        ))}
+        ))
+      ) : (
+        <h1>you dont have any blogs</h1>
+      )}
     </div>
   );
 };
 
-export default Blogs;
+export default userBlog;

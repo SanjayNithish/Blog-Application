@@ -4,7 +4,7 @@ const userModel = require("../Model/userModel");
 
 exports.getAllBlog = async (req, res) => {
   try {
-    const blogs = await blogModel.find({});
+    const blogs = await blogModel.find({}).populate("user");
     if (!blogs) {
       return res.status(200).send({
         success: false,
@@ -107,7 +107,7 @@ exports.deleteBlog = async (req, res) => {
   } catch (error) {
     console.log(error);
     return res.status(500).send({
-      message: "Error in updating Blog",
+      message: "Error in deleting Blog",
       success: false,
       error,
     });

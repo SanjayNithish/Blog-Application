@@ -6,6 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/user": "http://localhost:8010", // Proxy API requests starting with /user to the backend server
+      "/blog": "http://localhost:8010",
     },
   },
 });
