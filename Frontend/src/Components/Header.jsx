@@ -3,6 +3,7 @@ import "../App.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { authActions } from "../Redux/Store";
+import logo from "../assets/sn-logo.png";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -25,6 +26,9 @@ const Header = () => {
   return (
     <header className="navbar">
       <div className="navbar">
+        <div className="image">
+          <img src={logo} alt="" />
+        </div>
         <div className="navbar-brand">Blog App</div>
         {isLogin && (
           <div className="navbar-center">

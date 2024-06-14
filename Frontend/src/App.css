@@ -2,53 +2,59 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #1F1F1F;
+  font-family: "Karla", sans-serif;
 }
 
-/* Body styling */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f2f5;
-}
 
-/* Navbar styles */
 .navbar {
   position: sticky;
   top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #2c3e50;
+  background-color: #161616;
   padding: 1rem 2rem;
   color: white;
   font-family: Arial, sans-serif;
 }
 
-/* Style for the navbar brand (Blog App title) */
+
 .navbar-brand {
   font-size: 1.5rem;
   font-weight: bold;
+  background-color: #161616;
+  color:#ff799b ;
 }
 
-/* Style for the navbar center buttons */
+
 .navbar-center {
   display: flex;
   gap: 1rem;
   margin-left: 50px;
 }
 
-/* Style for the navbar buttons container */
 .navbar-buttons {
   display: flex;
   gap: 1rem;
 }
+.image{
+  padding-top: 5px;
+  background-color: #161616;
+}
+.image img{
+  height: 50px;
+  width: 60px;
+  background-color: #161616;
+}
 
-/* Style for individual navbar buttons */
 .navbar-button {
-  background-color: #27ae60; 
+  background-color: #FC93AD ; 
   border: none;
-  color: white;
+  color: rgb(0, 0, 0);
   padding: 0.5rem 1rem;
   font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
   border-radius: 5px;
   transition: background-color 0.3s ease;
@@ -58,12 +64,12 @@ body {
   justify-content: center; 
 }
 
-/* Hover effect for navbar buttons */
+
 .navbar-button:hover {
-  background-color: #2ecc71;
+  background-color:#ff799b;
 }
 
-/* Register page styles */
+
 .register-page {
   display: flex;
   justify-content: center;
@@ -73,21 +79,24 @@ body {
 
 .register-container {
   width: 450px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.137);
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
 .register-container h2 {
   margin-bottom: 1rem;
+  background-color: transparent;
+  color: #ff799b;
 }
 
 .register-form {
+  background-color: rgba(255, 255, 255, 0.021);
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  border: none;
 }
 
 .register-form input {
@@ -95,13 +104,14 @@ body {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
+  color: white;
 }
 
 .register-form button {
   padding: 0.5rem;
   border: none;
   border-radius: 5px;
-  background-color: #27ae60;
+  background-color: #ff799b;
   color: white;
   font-size: 1rem;
   cursor: pointer;
@@ -109,15 +119,18 @@ body {
 }
 
 .register-form button:hover {
-  background-color: #2ecc71;
+  background-color: #FC93AD;
 }
 
 .register-container p {
+  background-color: transparent;
   margin-top: 1rem;
+  color: white;
 }
 
 .register-container p a {
-  color: #27ae60;
+  background-color: transparent;
+  color: #ff799b;
   text-decoration: none;
 }
 
@@ -125,7 +138,6 @@ body {
   text-decoration: underline;
 }
 
-/* Blog card container */
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -136,11 +148,10 @@ body {
   padding: 20px;
 }
 
-/* Blog card styles */
 .card {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.13);
   border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.144);
   overflow: hidden;
   width: 100%;
   max-width: 500px;
@@ -149,37 +160,45 @@ body {
 }
 
 .card-header img {
+  background-color: transparent;
   width: 100%;
   height: 250px;
   object-fit: cover;
-  border-bottom: 2px solid #eee;
 }
 
 .card-body {
+  background-color: transparent;
   padding: 20px;
 }
 
 .card-body h3 {
+  background-color: transparent;
   margin: 10px 0;
   font-size: 1.5rem;
-  color: #333;
+  color: #ff799b;
   font-weight: bold;
 }
 
 .card-body p {
+  font-family: "Josefin Sans", sans-serif !important;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: transparent;
   font-size: 1rem;
   margin: 0 0 20px 0;
   font-weight: 400;
-  color: #555;
+  color: #dadada;
 }
 
 .user {
+  background-color: transparent;
   display: flex;
   align-items: center;
   margin-top: 20px;
 }
 
 .user img {
+  background-color: transparent;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -187,18 +206,23 @@ body {
   border: 2px solid #ddd;
   object-fit: cover;
 }
-
+.user-info{
+  background-color: transparent;
+}
 .user-info h5 {
+  background-color: transparent;
   margin: 0;
   font-size: 1rem;
-  color: #333;
+  color: #ff799b;
 }
 
 .user-info small {
-  color: #888;
+  color: #a0a0a0;
+  background-color: transparent;
 }
 
 .card-footer {
+  background-color: transparent;
   display: flex;
   justify-content: flex-end;
   gap: 10px;
@@ -217,24 +241,26 @@ body {
 }
 
 .edit-button {
-  background-color: #4CAF50;
-  color: white;
+  background-color: #00ca0a;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
 }
 
 .edit-button:hover {
-  background-color: #45a049;
+  background-color: rgb(0, 231, 12);
 }
 
 .delete-button {
-  background-color: #f44336;
-  color: white;
+  background-color: #ff1100c4;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
 }
 
 .delete-button:hover {
-  background-color: #da190b;
+  background-color:  #ff1100;
 }
 
-/* Form container for responsiveness */
+
 .form-container {
   display: flex;
   flex-direction: column;
@@ -242,20 +268,19 @@ body {
   justify-content: center;
   width: 100%;
   height: 85vh;
-  background-color: #f7f7f7;
+  background-color: #1F1F1F;
 }
 
 h2 {
   margin-bottom: 20px;
   font-size: 24px;
-  color: #333;
+  color: #ff799b;
 }
 
 form {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.137);
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px;
   display: flex;
@@ -263,9 +288,10 @@ form {
 }
 
 label {
+  background: transparent;
   margin-bottom: 10px;
   font-size: 14px;
-  color: #333;
+  color: #ffffff;
 }
 
 input {
@@ -274,20 +300,22 @@ input {
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  color: white;
 }
 
 button {
   padding: 10px 20px;
   font-size: 16px;
-  color: #fff;
-  background-color: #27ae60;
+  color: #000000;
+  background-color: #ff799b;
   border: none;
+  font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: rgb(0, 179, 134);
+  background-color:  #ff5882;
 }
 
 
